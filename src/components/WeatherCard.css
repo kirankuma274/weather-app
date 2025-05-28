@@ -1,0 +1,17 @@
+/* WeatherCard.css */
+.card {
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  width: 300px;
+  margin: 20px auto;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
