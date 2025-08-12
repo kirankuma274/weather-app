@@ -5,6 +5,12 @@ Features **glassmorphism design**, **animated pulsing weather icons**, and **dyn
 
 ---
 
+## 🌐 Live Demo
+
+ **Click:**  https://showweatherr.netlify.app
+ 
+ ---
+
 ## ✨ Features
 
 - 🌍 Search weather by **city name**
