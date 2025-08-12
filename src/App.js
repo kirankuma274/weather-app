@@ -10,6 +10,23 @@ function App() {
 
   const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
+  const getBackground = (weatherMain) => {
+    switch (weatherMain) {
+      case 'Clear':
+        return 'linear-gradient(135deg, #f6d365, #fda085)';
+      case 'Clouds':
+        return 'linear-gradient(135deg, #d7d2cc, #304352)';
+      case 'Rain':
+        return 'linear-gradient(135deg, #667db6, #0082c8)';
+      case 'Snow':
+        return 'linear-gradient(135deg, #83a4d4, #b6fbff)';
+      case 'Thunderstorm':
+        return 'linear-gradient(135deg, #0f0c29, #302b63, #24243e)';
+      default:
+        return 'linear-gradient(135deg, #00c6ff, #0072ff)';
+    }
+  };
+
   const getWeather = async () => {
     if (!city) return;
     setLoading(true);
@@ -35,18 +52,28 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <h1>🌤 Weather App</h1>
-      <input
-        type="text"
-        placeholder="Enter city"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <button onClick={getWeather}>Get Weather</button>
+    <div
+      className="app"
+      style={{
+        background: weather
+          ? getBackground(weather.weather[0].main)
+          : 'linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d)' // dark default
+      }}
+    >
+      <h1 className="app-title">🌤 Weather App</h1>
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Enter city"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && getWeather()}
+        />
+        <button onClick={getWeather}>Get Weather</button>
+      </div>
 
-      {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {loading && <p className="loading">Loading...</p>}
+      {error && <p className="error">{error}</p>}
       {weather && <WeatherCard data={weather} />}
     </div>
   );

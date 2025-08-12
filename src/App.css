@@ -1,18 +1,60 @@
 .app {
-  text-align: center;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.5s ease-in-out;
 }
 
-input, button {
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
+.app-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 
+    0 3px 8px rgba(0, 0, 0, 0.4), 
+    0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  width: 220px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 button {
-  background-color: #007BFF;
-  color: white;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
   border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 118, 136, 0.5);
+}
+
+.loading {
+  margin-top: 20px;
+  color: white;
+}
+
+.error {
+  margin-top: 20px;
+  color: #ffcccc;
+  font-weight: bold;
 }
