@@ -16,21 +16,6 @@ Features **glassmorphism design**, **animated pulsing weather icons**, and **dyn
 
 ---
 
-## 🖼 Preview
-
-### Home Page
-![Home Page](assets/image.png)
-
-### Search Results
-![Search Results](assets/image-1.png)
-
-### Detailed Weather View
-![Detailed View](assets/image-2.png)
-
-
-
----
-
 ## 🚀 Installation & Setup
 
 1. **Clone the repository**
