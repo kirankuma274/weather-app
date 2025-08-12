@@ -18,7 +18,14 @@ Features **glassmorphism design**, **animated pulsing weather icons**, and **dyn
 
 ## 🖼 Preview
 
-![![alt text](image.png),![alt text](image-1.png),![alt text](image-2.png)](screenshot.png)
+### Home Page
+![Home Page](assets/image.png)
+
+### Search Results
+![Search Results](assets/image-1.png)
+
+### Detailed Weather View
+![Detailed View](assets/image-2.png)
 
 
 
